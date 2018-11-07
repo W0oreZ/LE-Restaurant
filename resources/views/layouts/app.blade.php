@@ -85,7 +85,7 @@
                                     <span class="icon m-r-10"><i class="fa fa-fw fa-user-circle-o"></i></span>
                                     Profile
                                 </a>
-                                <a href="{{route('manage')}}" class="navbar-item">
+                                <a href="{{route('home')}}" class="navbar-item">
                                     <span class="icon m-r-10"><i class="fa fa-fw fa-note"></i></span>
                                     Mannage
                                 </a>
@@ -98,7 +98,7 @@
                                     Settings
                                 </a>
                                 <hr class="navbar-divider m-t-10">
-                                <a href="{{route('logout')}}" class="navbar-item">
+                                <a href="{{route('logout','POST')}}" class="navbar-item">
                                     <span class="icon m-r-10"><i class="fa fa-fw fa-sign-out"></i></span>
                                     Logout
                                 </a>

@@ -14,15 +14,15 @@
                 <div class="field">
                     <label class="label">Username</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input {{ $errors->has('username') ? ' is-danger' : '' }}" type="text" placeholder="Enter your Username" name="username">
+                        <input class="input {{ $errors->has('name') ? ' is-danger' : '' }}" type="text" placeholder="Enter your Username" name="name">
                         <span class="icon is-small is-left">
                         <i class="fa fa-fw fa-user-circle-o"></i>
                         </span>
-                        @if ($errors->has('username'))
+                        @if ($errors->has('name'))
                         <span class="icon is-small is-right">
                             <i class="fa fa-exclamation-triangle"></i>
                         </span>
-                        <p class="help is-danger">{{ $errors->first('username') }}</p>
+                        <p class="help is-danger">{{ $errors->first('name') }}</p>
                         @endif
                     </div>
                 </div>
