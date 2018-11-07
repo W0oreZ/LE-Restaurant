@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>LE-Restaurant</title>
+    <title>LE-Restaurant MANAGEMENT</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -17,10 +17,12 @@
 </head>
 <body>
     @include('_includes/nav.main')
+    @include('_includes/nav.side')
 
-    <div id="app">
+    <div class="management-area" id="app">
         @yield('content')
     </div>
+
 
     <!--Scripts-->
     <script src="{{ asset('js/app.js') }}" defer></script>
