@@ -14,8 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Auth::routes();
-// Authentication Routes...
-Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+// Authentication Routes...
+Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
+//mannagement routes
+
+Route::group(['prefix' => 'manage','middleware'=>'role:superadministrator|administrator|manager|server'], function () {
+    //Route::redirect('/', 'ManageController@dashboard', 301);
+    Route::get('/dashboard','ManageController@dashboard')->name('manage.dashboard');
+    Route::resource('/users', 'UserController');
+    Route::get('/products')->name('manage.produts');
+
+});
